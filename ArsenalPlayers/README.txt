@@ -1,5 +1,7 @@
 Hello, thanks for looking at my submission for this. I'm going to briefly list the reqs and how I met them + give details on what's needed to run this app locally
 
+Uploaded the project with all its CSS so hopefully it looks as it should, can change the upload if needed.
+
 1 - REQS
 
 The requirements were as follows:
@@ -69,7 +71,7 @@ Requirements:
 	DONE
 
     c) Add an external API integration:
-        ? Integrate with Football-Data.org and surface Arsenal’s results from this season as well as their next 5 fixtures. You can use creative license to design this as you’d like. 
+        ? Integrate with Football-Data.org and surface Arsenalâ€™s results from this season as well as their next 5 fixtures. You can use creative license to design this as youâ€™d like. 
         ? https://www.football-data.org/ 
 
 	DONE - This part of the app uses the following API call for Arsenal matches which is defined in the 	footballURL.txt file in root: https://api.football-data.org/v4/teams/57/matches
