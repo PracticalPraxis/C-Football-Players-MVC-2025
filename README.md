@@ -40,6 +40,7 @@ Requirements:
 	DONE
  
 2. Frontend Development
+   
 Requirements:
 
     a) Create a view that lists all players from the database in a Bootstrap-styled table using DataTables. The table should show: Player Name, Position, Jersey Number, and Goals Scored.
@@ -60,7 +61,8 @@ Requirements:
 	DONE - Exception is that I set PlayerName to be non-nullable in its Model definiton so did not need to JS this 	req, and I should also say I'd prefer to keep things non-JS for reqs like this but did implement a JS solution 	for JerseyNumber being unique (though I feel it's a little hacky and not great code) 
  
 
-3. Integration with APIs
+4. Integration with APIs
+   
 Requirements:
 
     a) Create a RESTful API endpoint in your ASP.NET application to retrieve all players as a JSON list.
