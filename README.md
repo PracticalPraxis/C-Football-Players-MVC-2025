@@ -1,7 +1,5 @@
 # C-Football-Players-MVC-2025
-Hello, thanks for looking at my submission for this. I'm going to briefly list the reqs and how I met them + give details on what's needed to run this app locally
-
-Uploaded the project with all its CSS so hopefully it looks as it should, can change the upload if needed.
+Hello, thanks for looking at my submission for this. I'm going to briefly list the reqs and how I met them + give details on what's needed to run this app locally. Uploaded the project with all its CSS so hopefully it looks as it should, can change the upload if needed.
 
 Addiitonally, I implemented the API call values with local text files, i.e. you will need to put values into the empty local text files for the API call to work. I won't share my API key just as good practice, but you can put your own in **'apiKey.txt'**.
 
