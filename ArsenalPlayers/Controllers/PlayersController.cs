@@ -175,7 +175,7 @@ namespace ArsenalPlayers.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Name,Position,JerseyNumber,GoalsScored")] Player player)
+        public async Task<IActionResult> Create([Bind("Id,PlayerName,Position,JerseyNumber,GoalsScored")] Player player)
         {
             if (ModelState.IsValid)
             {
@@ -184,7 +184,7 @@ namespace ArsenalPlayers.Controllers
                 return RedirectToAction(nameof(Index));
             }
 
-            TempData["createPlayerFailureMessage"] = "Player Creation Failed - Please enter valid values for each field (Name - String, Position - String, JerseyNumber - Integer, GoalsScored - Integer)";
+            TempData["createPlayerFailureMessage"] = "Player Creation Failed - Please enter valid values for each field (PlayerName - String, Position - String, JerseyNumber - Integer, GoalsScored - Integer)";
             return RedirectToAction(nameof(Index));
         }
 
@@ -209,7 +209,7 @@ namespace ArsenalPlayers.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Position,JerseyNumber,GoalsScored")] Player player)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,PlayerName,Position,JerseyNumber,GoalsScored")] Player player)
         {
             if (id != player.Id)
             {

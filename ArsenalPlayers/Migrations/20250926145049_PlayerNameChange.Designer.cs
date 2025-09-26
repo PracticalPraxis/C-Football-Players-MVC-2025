@@ -3,6 +3,7 @@ using ArsenalPlayers.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ArsenalPlayers.Migrations
 {
     [DbContext(typeof(ArsenalPlayersContext))]
-    partial class ArsenalPlayersContextModelSnapshot : ModelSnapshot
+    [Migration("20250926145049_PlayerNameChange")]
+    partial class PlayerNameChange
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
