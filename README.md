@@ -3,7 +3,7 @@ Hello, thanks for looking at my submission for this. I'm going to briefly list t
 
 Addiitonally, I implemented the API call values with local text files, i.e. you will need to put values into the empty local text files for the API call to work. I won't immediately share my API key just as good practice, but you can put your own in **'apiKey.txt'** (if you don't want to get your own, you can find mine in the file history for that text file here - it's a free one that only allows about a dozen requests per minute).
 
-The URL used for development, and that should be put into **'footballURL.txt'** that met the req in my eyes was the following: **https://api.football-data.org/v4/teams/57/matches**
+The URL used for development (and in my eyes meets the Reqs) should be presnt in **'footballURL.txt'**  and is the following: **https://api.football-data.org/v4/teams/57/matches**
 
 Ideally these would have been values input by the user on a form, but time constraints prevented me from adding that feature.
 
