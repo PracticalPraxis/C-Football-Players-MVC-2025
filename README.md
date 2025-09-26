@@ -3,11 +3,9 @@ Hello, thanks for looking at my submission for this. I'm going to briefly list t
 
 Uploaded the project with all its CSS so hopefully it looks as it should, can change the upload if needed.
 
-Addiitonally, I implemented the API call values with local text files, i.e. you will need to put values into the empty local text files for the API call to work
+Addiitonally, I implemented the API call values with local text files, i.e. you will need to put values into the empty local text files for the API call to work. I won't share my API key just as good practice, but you can put your own in **'apiKey.txt'**.
 
-I won't share my API key just as good practice, but you can put your own in 'apiKey.txt'
-
-The URL used for development, and that should be put into 'footballURL.txt' that met the req in my eyes was the following: https://api.football-data.org/v4/teams/57/matches
+The URL used for development, and that should be put into **'footballURL.txt'** that met the req in my eyes was the following: **https://api.football-data.org/v4/teams/57/matches**
 
 Ideally these would have been values input by the user on a form, but time constraints prevented me from adding that feature
 
