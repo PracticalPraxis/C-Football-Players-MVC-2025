@@ -4,76 +4,70 @@
     ViewData["Title"] = "Create";
 }
 
-<h1>Create</h1>
+<div class="container">
+    <main role="main" class="pb-3">
+        <h1>Create</h1>
 
-<h4>Player</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Create">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="Name" class="control-label"></label>
-                <input asp-for="Name" class="form-control" />
-                <span asp-validation-for="Name" class="text-danger"></span>
+        <h4>Player</h4>
+        <hr />
+        <div class="row">
+            <div class="col-md-4">
+                <form id= "CreateForm" asp-action="Create">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="mb-3">
+                        <label asp-for="Name" class="form-label"></label>
+                        <input asp-for="Name" class="form-control" />
+                        <span asp-validation-for="Name" class="text-danger"></span>
+                    </div>
+                    <div class="mb-3">
+                        <label asp-for="Position" class="form-label"></label>
+                        <input asp-for="Position" class="form-control" />
+                        <span asp-validation-for="Position" class="text-danger"></span>
+                    </div>
+                    <div class="mb-3">
+                        <label asp-for="JerseyNumber" class="form-label"></label>
+                        <input asp-for="JerseyNumber" class="form-control" id="JerseyNumberInput" />
+                        <span asp-validation-for="JerseyNumber" class="text-danger"></span>
+                    </div>
+                    <div class="mb-3">
+                        <label asp-for="GoalsScored" class="form-label"></label>
+                        <input asp-for="GoalsScored" class="form-control" />
+                        <span asp-validation-for="GoalsScored" class="text-danger"></span>
+                    </div>
+                    <div class="mb-3">
+                        <input type="submit" value="Create" class="btn btn-primary" />
+                    </div>
+                </form>
             </div>
-            <div class="form-group">
-                <label asp-for="Position" class="control-label"></label>
-                <input asp-for="Position" class="form-control" />
-                <span asp-validation-for="Position" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="JerseyNumber" class="control-label"></label>
-                <input asp-for="JerseyNumber" class="form-control" />
-                <span asp-validation-for="JerseyNumber" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="GoalsScored" class="control-label"></label>
-                <input asp-for="GoalsScored" class="form-control" />
-                <span asp-validation-for="GoalsScored" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
-            </div>
-        </form>
+        </div>
+     </main>
+    <div>
+        <a asp-action="Index" class="btn btn-parimary">Back to List</a>
     </div>
 </div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
+@* HC 26/09/2025 - Javascript for making sure currently submitted Jersey Number is Unique*@
+<script type="text/javascript">
+    myForm = document.getElementById('CreateForm');
+    myForm.addEventListener('submit', verifyCheckboxes);
+    function verifyCheckboxes(e) {
+        const jerseyArray = [];
+        $('.JerseyNumberTD').each(function () {
+            var cellText = $(this).text();
+            var cleanedText = cellText.match(/\d/g);
+            cleanedText = cleanedText.join("")
+            jerseyArray.push(cleanedText);
+        });
+        var jerseyNumberInputeValue = document.getElementById("JerseyNumberInput").value;
+        var valuePresent = jerseyArray.indexOf(jerseyNumberInputeValue);
+        if(valuePresent != -1)
+        {
+            alert("This Jersey Number is already present, please submit an alternative Jersey Number");
+            e.preventDefault();
+        }
+    }
+</script>
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 }
-
-    @* <script>
-        $(document).ready(function () {
-
-            $('#myform').validate({ // initialize the plugin
-                rules: {
-                    field1: {
-                        required: true,
-                        email: true
-                    },
-                    field2: {
-                        required: true,
-                        minlength: 5
-                    }
-                }
-            });
-
-        });
-    </script>
-
-    NEW - JerseyNumber scriptlet
-
-    const newArray = [];
-$('#PlayerTable td.JerseyNumber').each(function() {
-    var cellText = $(this).text();
-    console.log(cellText);
-    newArray.push(cellText)
-});
-console.log(newArray.indexOf("4"));
-
-*@
