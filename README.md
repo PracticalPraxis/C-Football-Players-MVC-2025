@@ -5,7 +5,7 @@ Addiitonally, I implemented the API call values with local text files, i.e. you 
 
 The URL used for development (and in my eyes meets the Reqs) should be present in **'footballURL.txt'**  and is the following: **https://api.football-data.org/v4/teams/57/matches**
 
-Ideally these would have been values input by the user on a form, but time constraints prevented me from adding that feature.
+Ideally these would have been values input by the user on a form, but time constraints prevented me from adding that feature so local text file sare the interim solution.
 
 **1 - REQS**
 
